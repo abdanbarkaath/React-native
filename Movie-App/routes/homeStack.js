@@ -13,27 +13,9 @@ const { Navigator, Screen } = createStackNavigator();
 
 export const HomeStack = ({ navigation }) => (
     <Provider store={store}>
-
-        <Navigator screenOptions={{
-            headerStyle: {
-                backgroundColor: 'white',
-            },
-            headerTitleAlign: 'center',
-            headerTintColor: 'black',
-
-        }}>
-            <Screen name='Home' component={Home} options={{
-                title: 'Home',
-                headerTitle: () => <Header title='Home' navigation={navigation} />,
-            }}
-            />
-            <Screen
-                name='ReviewDetails'
-                component={ReviewDetails}
-                options={{
-                    title: 'Review Details',
-                }}
-            />
+        <Navigator screenOptions={{ headerStyle: { backgroundColor: 'white', }, headerTitleAlign: 'center', headerTintColor: 'black', }}>
+            <Screen name='Home' component={Home} options={{ title: 'Home', headerTitle: () => <Header title='Home' navigation={navigation} />, }} />
+            <Screen name='ReviewDetails' component={ReviewDetails} options={{ title: 'Review Details', }} />
         </Navigator>
     </Provider>
 );

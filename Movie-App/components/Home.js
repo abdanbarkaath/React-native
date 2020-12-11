@@ -77,6 +77,7 @@ function Home({ navigation, reviews, AddUserReview }) {
           )}
         /> */}
         <View>
+          <Button title="click me" onPress={() => navigation.navigate('General')}></Button>
         </View>
       </View>
     </Provider>

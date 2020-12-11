@@ -2,8 +2,7 @@ import React from 'react';
 import { Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Movies from '../components/Movies';
-import SingleMovie from '../components/SingleMovie';
+import Search from '../components/Search';
 
 import Header from '../shared/Header'
 import { Provider } from 'react-redux';
@@ -13,9 +12,8 @@ const { Navigator, Screen } = createStackNavigator();
 
 export const MovieStack = ({ navigation }) => (
     <Provider store={store}>
-        <Navigator screenOptions={{ headerStyle: { backgroundColor: 'white', }, headerTitleAlign: 'center', headerTintColor: 'black' }}>
-            <Screen name='Movies' component={Movies} options={{}} />
-            <Screen name='SingleMovie' component={SingleMovie} options={{ title: 'Single Movie', }} />
+        <Navigator screenOptions={{ headerStyle: { backgroundColor: 'black', }, headerTitleAlign: 'center', headerTintColor: 'white', }}>
+            <Screen name='Search' component={Search} />
         </Navigator>
     </Provider>
 );

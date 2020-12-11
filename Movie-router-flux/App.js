@@ -1,13 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Router, Scene, Stack } from 'react-native-router-flux';
+
+import Home from './src/pages/Home'
+import About from './src/pages/About'
+import FooterBar from './src/components/FooterBar'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Router>
+      <Stack key="root">
+        <Scene key="home" component={Home} title="Home" />
+        <Scene key="about" component={About} title="About" />
+        <FooterBar></FooterBar>
+      </Stack>
+    </Router>
   );
 }
 
