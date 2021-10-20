@@ -17,7 +17,7 @@ export default function About({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('DrawerHome')} />
+      <Button title="Go to Home" onPress={() => navigation.navigate('HomeStack')} />
     </View>
   );
 }

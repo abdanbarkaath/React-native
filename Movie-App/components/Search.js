@@ -93,7 +93,9 @@ export default function Search({ navigation }) {
                 style={{ marginTop: 20, paddingBottom: 20, }}
                 numColumns={3}
                 keyExtractor={(item, index) => index}
-                renderItem={renderItem}
+                renderItem={
+                    
+                }
             /> : stillSearchMovie()
             }
 
